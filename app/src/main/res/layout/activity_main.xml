@@ -12,9 +12,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Silahkan Scan QR Code" />
+        android:text="Silahkan Scan QR Code"
+        android:textSize="18sp" />
 
     <Button
         android:text="Scan Code"
@@ -23,7 +24,6 @@
         android:id="@+id/buttonScan" />
 
     <TextView
-        android:text="TextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView4" />

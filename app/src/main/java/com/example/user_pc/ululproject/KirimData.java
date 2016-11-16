@@ -57,8 +57,8 @@ public class KirimData extends AppCompatActivity {
 
         Intent i = getIntent();
         id = i.getStringExtra("data");
-//         id = "10";
-       // id = 10;
+       //  id = "160";
+
 
 
 
@@ -89,14 +89,14 @@ public class KirimData extends AppCompatActivity {
 
 
     private void save() {
-//        PD.show();
+       PD.show();
         final String aa = String.valueOf(id.toString());
         final String bb = nama.getText().toString().trim();
         final String cc = keterangan.getText().toString().trim();
 
 //        System.out.println(aa+" "+bb+" "+cc);
 
-
+       // Toast.makeText(KirimData.this, "Data : "+aa +" "+bb+ " "+cc, Toast.LENGTH_SHORT).show();
 
 
         StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/ulum/insert_pemeriksa.php?",
@@ -105,7 +105,7 @@ public class KirimData extends AppCompatActivity {
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
 
-                        System.out.println("bima"+response.toString());
+                       // System.out.println("bima"+response.toString());
                         PD.dismiss();
                         if(response.equals("Sukses")){
 
@@ -141,7 +141,7 @@ public class KirimData extends AppCompatActivity {
 
         };
         //  Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
-        int socketTimeout = 10000;//30 seconds - change to what you want
+        int socketTimeout = 10000;//10 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         sR.setRetryPolicy(policy);

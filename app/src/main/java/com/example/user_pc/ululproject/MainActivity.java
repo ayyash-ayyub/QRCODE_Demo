@@ -67,7 +67,9 @@ public class MainActivity extends AppCompatActivity {
                  id = parts[1];
 
 
-                percobaan.setText(id);
+               // percobaan.setText(id);
+                
+
 
 
                 alertDialog.setPositiveButton("Update Data", new DialogInterface.OnClickListener() {
