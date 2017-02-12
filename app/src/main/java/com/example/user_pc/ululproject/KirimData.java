@@ -99,7 +99,7 @@ public class KirimData extends AppCompatActivity {
        // Toast.makeText(KirimData.this, "Data : "+aa +" "+bb+ " "+cc, Toast.LENGTH_SHORT).show();
 
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/ulum/insert_pemeriksa.php?",
+        StringRequest sR = new StringRequest(Request.Method.POST, "http://ulum.projectaplikasi.web.id/insert_pemeriksa.php?",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
